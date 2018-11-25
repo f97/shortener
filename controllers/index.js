@@ -40,7 +40,8 @@ const saveUrl = (req, res) => {
                         const code = encode(doc._id);
                         res.status(201).json({
                             code: code,
-                            link: req.protocol + '://' + req.get('host') + '/' + code
+                            short_url: req.protocol + '://' + req.get('host') + '/' + code,
+                            long_url: url[0].url
                         });
                     }
                 });
