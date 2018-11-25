@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var minifyHTML = require('express-minify-html');
 
 var indexRouter = require('./routes/index');
 var doRouter = require('./routes/do');
@@ -24,6 +25,19 @@ mongoose.set('useFindAndModify', false)
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+app.use(minifyHTML({
+  override:      true,
+  exception_url: false,
+  htmlMinifier: {
+      removeComments:            true,
+      collapseWhitespace:        true,
+      collapseBooleanAttributes: true,
+      removeAttributeQuotes:     true,
+      removeEmptyAttributes:     true,
+      minifyJS:                  true
+  }
+}));
 
 app.use(logger('dev'));
 app.use(express.json());

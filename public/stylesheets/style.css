@@ -69,3 +69,7 @@ pre {
 .small-font {
   font-size: 10px !important;
 }
+
+img{
+  margin: 0 auto
+}
