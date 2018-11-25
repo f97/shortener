@@ -41,7 +41,7 @@ const saveUrl = (req, res) => {
                         res.status(201).json({
                             code: code,
                             short_url: req.protocol + '://' + req.get('host') + '/' + code,
-                            long_url: url[0].url
+                            long_url: doc.url
                         });
                     }
                 });
