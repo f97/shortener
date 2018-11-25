@@ -1,0 +1,30 @@
+  <div class="container">
+
+<h1 class="slogan">URL shortener with Nodejs</h1>
+<p class="slogan">Contact me at: <a href="https://www.facebook.com/z.MrSoi" target="_blank">https://www.facebook.com/z.MrSoi</a></p>
+<div class="row">
+  <div class="col-xs-4">
+    <!-- thi chu co link khong -->
+    <img src="//i.imgur.com/NP4giK1m.jpg" class="img-responsive">
+
+  </div>
+  <div class="col-xs-8">
+      <input class="pure-input-1" type="hidden" name="_csrf" value="TlgSXOUc-jcHSzYnqMr3wnDqVtlfUuqv4Fok">
+      <div class="form-group">
+        <label>Long URL (Public)</label>
+        <input id="long-url" class="form-control" type="url" name="contact_me_to_use_api_dont_do_this" placeholder="Nhập Link Google Drive" required value="https://mrsoi.com">
+        <p class="help-block">
+            You cant create short url with 1s and and never repeat a long url... 
+        </p>
+      </div>
+      <div class="form-action">
+        <button id="btn-shorter" class="btn btn-success btn-block" type="submit"  data-loading-text="<i class='fa fa-spinner fa-spin'></i> Shortening.......">
+          Create....
+            <div class="bullet green"></div> 
+        </button>
+      </div>
+      <br>
+      <p id="short-url" class="form-control hidden"></p>
+  </div>
+</div>
+</div>
